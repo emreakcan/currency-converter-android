@@ -53,6 +53,24 @@ Currency converter by using revolut api
     
 ```
 
+Sample unit test, see all in view model test class.
+
+```
+    @Test
+    @DisplayName("When base currency changed, get correct base currency and correctly observed")
+    fun testBaseCurrencyChanges(){
+
+        every { localService.setCurrencyCode("EUR") } returns Completable.complete()
+
+
+        every {
+            localService.getLastSelectedCurrency().subscribe {
+                Truth.assertThat(it.code).isEqualTo("EUR")
+            }
+        }
+
+    }
+```
 
 # Thanks
 - For icons https://www.flaticon.com/authors/flags/rounded
