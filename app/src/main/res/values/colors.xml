@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="transparent">#00f5f5f5</color>
+    <color name="circular_progress">#1F74F0</color>
+    <color name="primary_black">#191C1F</color>
+    <color name="primary_grey">#8B959E</color>
+    <color name="white">#FFFFFF</color>
+</resources>

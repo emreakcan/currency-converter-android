@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_header">16sp</dimen>
+    <dimen name="text_size_description">14sp</dimen>
+    <dimen name="margin_general">16dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="item_view_height">72dp</dimen>
+    <dimen name="image_width">40dp</dimen>
+    <dimen name="image_height">40dp</dimen>
+    <dimen name="margin_input_top">21dp</dimen>
+</resources>

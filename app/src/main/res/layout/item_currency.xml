@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_view_height"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img_currency"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_marginStart="@dimen/margin_general"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_cur_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_general"
+        android:layout_marginTop="@dimen/margin_general"
+        android:textColor="@color/primary_black"
+        android:letterSpacing="-0.02"
+        android:textSize="@dimen/text_size_header"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_currency"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TRY" />
+
+    <TextView
+        android:id="@+id/txt_cur_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_general"
+        android:layout_marginTop="4dp"
+        android:textSize="@dimen/text_size_description"
+        android:letterSpacing="-0.01"
+        android:textColor="@color/primary_grey"
+        app:layout_constraintStart_toEndOf="@+id/img_currency"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cur_code"
+        tools:text="Turkish Lira" />
+
+    <EditText
+        android:id="@+id/edt_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_input_top"
+        android:layout_marginEnd="@dimen/margin_general"
+        android:inputType="numberDecimal"
+        android:maxLength="17"
+        android:textColor="@color/primary_black"
+        android:letterSpacing="0.02"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

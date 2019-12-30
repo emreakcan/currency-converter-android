@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.emre.currency"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            all { useJUnitPlatform() }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation project(':repo')
+    implementation project(':common')
+
+    // Dagger
+    kapt "com.google.dagger:dagger-compiler:${libraries.dagger2Version}"
+    kapt "com.google.dagger:dagger-android-processor:${libraries.dagger2Version}"
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    //Logger
+    implementation "com.orhanobut:logger:${libraries.logger}"
+    api "com.squareup.okhttp3:logging-interceptor:${libraries.okhttp}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${libraries.jUnit}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${libraries.jUnit}"
+    androidTestImplementation "de.mannodermaus.junit5:android-instrumentation-test:${libraries.jUnitInstrumentation}"
+    androidTestRuntimeOnly "de.mannodermaus.junit5:android-instrumentation-test-runner:${libraries.jUnitInstrumentation}"
+
+    //  mockk
+    testImplementation("io.mockk:mockk:${libraries.mockkVersion}")
+    testImplementation "android.arch.core:core-testing:${libraries.coreTestingVersion}"
+    testImplementation "com.google.truth:truth:${libraries.truthVersion}"
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+}
