@@ -27,3 +27,6 @@ Store last updated currencies and display last known currencies to user by infor
 
 Create UI tests by Appium - Selendroid
 
+Improve font according to branding and set company logo.
+
+Add splash screen.
