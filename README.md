@@ -18,6 +18,7 @@ Currency coverter by using revolut api
 - Repo
     Contains local and remote repo, models and local databases here.
 
+![diagram](https://github.com/emreakcan/currency-converter-android/blob/master/diagram.png)
 
 
 
