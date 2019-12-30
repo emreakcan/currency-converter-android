@@ -23,7 +23,10 @@ class GetCurrenciesUseCase @Inject constructor(private val currencyRepository: C
             .flatMap<Resource<List<RateLocalModel>>> { resource ->
                 when (resource) {
                     is Resource.Success -> {
-                        val resultList = convertCurrMapToList(resource.data.ratesMap, amount.toBigDecimal())
+                        val resultList = convertCurrMapToList(
+                            resource.data.ratesMap,
+                            amount.toBigDecimal()
+                        )
 
                         resultList.add(0,
                             RateLocalModel(
@@ -54,6 +57,8 @@ class GetCurrenciesUseCase @Inject constructor(private val currencyRepository: C
         }
         return result
     }
+
+
 }
 
 

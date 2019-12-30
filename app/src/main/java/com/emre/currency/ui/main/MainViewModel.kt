@@ -66,10 +66,14 @@ class MainViewModel @Inject constructor(
     }
 
     fun onCurrencyItemSelected(rateLocalModel: RateLocalModel) {
+        onCurrencyAmountChanged(rateLocalModel.amount)
+
         updateCurrencyCodeUseCase
             .setCode(rateLocalModel.currency.currencyCode)
             .subscribe()
             .let { compositeDisposable.add(it) }
+
+
     }
 
     fun onCurrencyAmountChanged(newCurrencyAmount: BigDecimal) {
