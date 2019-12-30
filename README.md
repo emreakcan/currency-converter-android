@@ -15,6 +15,8 @@ Currency coverter by using revolut api
 - Repo
     Contains local and remote repo, models and local databases here.
 
+![sample_image](sample.png)
+
 
 
 
