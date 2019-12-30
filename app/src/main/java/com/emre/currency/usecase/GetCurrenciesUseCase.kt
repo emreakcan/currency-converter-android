@@ -57,8 +57,6 @@ class GetCurrenciesUseCase @Inject constructor(private val currencyRepository: C
         }
         return result
     }
-
-
 }
 
 
