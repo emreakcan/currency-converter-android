@@ -1,5 +1,5 @@
 # Currency Converter
-Currency coverter by using revolut api
+Currency converter by using revolut api
 
 - Fetches update currencies from revolut api every 1 second.
 - Calculates other currencies by using users currency and amount selection
