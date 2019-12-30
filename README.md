@@ -11,12 +11,12 @@ Currency coverter by using revolut api
 
 
 *Modules* 
-- App
-    Contains App code & Tests
-- Common 
-    Contains common variables such as constans
-- Repo
-    Contains local and remote repo, models and local databases here.
+1. App
+    1. Contains App code & Tests
+2. Common 
+    1. Contains common variables such as constans
+3. Repo
+    1. Contains local and remote repo, models and local databases here.
 
 ![diagram](https://github.com/emreakcan/currency-converter-android/blob/master/diagram.png)
 
