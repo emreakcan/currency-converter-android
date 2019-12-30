@@ -10,6 +10,7 @@ import com.emre.currency.usecase.GetLastCurrencyUseCase
 import com.emre.currency.usecase.UpdateCurrencyCodeUseCase
 import com.emre.currency.util.extension.CurrencyDiff
 import com.emre.repo.network.model.RateLocalModel
+import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -38,13 +39,14 @@ class MainViewModel @Inject constructor(
     fun getCurrencies(baseCur: String, amount: String, repeat: Boolean) {
         userCurrencyExchangeRatesListChangesDisposable?.dispose()
 
-        val observable = getCurrenciesUseCase.get(baseCur, amount)
-        if(repeat)
-            observable.repeatWhen { it.delay(1, TimeUnit.SECONDS) }
 
+        val observable = if(repeat) {
+            getCurrenciesUseCase.get(baseCur, amount).repeatWhen { it.delay(1, TimeUnit.SECONDS) }
+        } else{
+            getCurrenciesUseCase.get(baseCur, amount)
+        }
 
         observable
-            .repeatWhen { it.delay(1, TimeUnit.SECONDS) }
             .throttleWithTimeout(200, TimeUnit.MILLISECONDS)
             .subscribe { resource ->
                 isDataLoading.postValue(false)
