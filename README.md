@@ -4,6 +4,9 @@ Currency coverter by using revolut api
 - Fetches update currencies from revolut api every 1 second.
 - Calculates other currencies by using users currency and amount selection
 
+![sample_image](https://github.com/emreakcan/currency-converter-android/blob/master/sample.png)
+
+
 # Architecture
 
 
@@ -15,7 +18,6 @@ Currency coverter by using revolut api
 - Repo
     Contains local and remote repo, models and local databases here.
 
-![sample_image](sample.png)
 
 
 
