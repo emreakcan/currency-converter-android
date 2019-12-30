@@ -17,9 +17,10 @@ Currency coverter by using revolut api
 
 
 
+
 # Thanks
-For icons https://www.flaticon.com/authors/flags/rounded
-Architecture https://mindorks.com/android/store/Architecture/patrickyin/clean-architecture-android-kotlin
+- For icons https://www.flaticon.com/authors/flags/rounded
+- Architecture https://mindorks.com/android/store/Architecture/patrickyin/clean-architecture-android-kotlin
 
 # Possible improvements
 Store last updated currencies and display last known currencies to user by informing last update date, so when there is no internet use can see last updated currencies.
