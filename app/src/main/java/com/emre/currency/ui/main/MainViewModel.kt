@@ -42,7 +42,9 @@ class MainViewModel @Inject constructor(
         if(repeat)
             observable.repeatWhen { it.delay(1, TimeUnit.SECONDS) }
 
+
         observable
+            .repeatWhen { it.delay(1, TimeUnit.SECONDS) }
             .throttleWithTimeout(200, TimeUnit.MILLISECONDS)
             .subscribe { resource ->
                 isDataLoading.postValue(false)
