@@ -11,11 +11,11 @@ Currency converter by using revolut api
 
 
 *Modules* 
-- App
+- App ->
     Contains App code & Tests
-- Common 
+- Common ->
     Contains common variables such as constants
-- Repo
+- Repo ->
     Contains local and remote repo, models and local databases here.
 
 ![diagram](https://github.com/emreakcan/currency-converter-android/blob/master/diagram.png)
